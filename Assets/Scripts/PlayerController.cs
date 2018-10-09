@@ -70,7 +70,8 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetButton("Up") == true)
             {
                 Vector2 dash = new Vector2(-dashMovement, dashMovement);
-                rb2d.MovePosition(rb2d.position + dash);
+                rb2d.velocity = new Vector2(-dashMovement*40, dashMovement*40);
+                //rb2d.MovePosition(rb2d.position + dash);
             }
             else if(Input.GetButton("Down")==true)
             {
